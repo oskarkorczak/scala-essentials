@@ -11,4 +11,10 @@ class Pattern {
     def featureTwo: Int
   }
 
+  // ======
+
+  sealed trait SumType
+  final case class eitherThis() extends SumType
+  final case class orThat() extends SumType
+
 }

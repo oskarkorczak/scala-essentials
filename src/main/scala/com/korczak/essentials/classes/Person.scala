@@ -17,3 +17,7 @@ class PersonWithConstructor(first: String, last: String) {
 class PersonFieldGetters(val first: String, val last: String) {
   def name: String = s"$first $last"
 }
+
+class PersonDefault(val first: String, val last: String = "Smith") {
+  def name: String = s"$first $last"
+}

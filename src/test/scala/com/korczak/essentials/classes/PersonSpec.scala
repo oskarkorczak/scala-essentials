@@ -19,4 +19,9 @@ class PersonSpec  extends UnitSpec {
     bond.firstName shouldBe "James"
     bond.lastName shouldBe "Bond"
   }
+
+  "PersonDefault" should "introduce itself" in {
+    new PersonDefault("James", "Bond").name shouldBe "James Bond"
+    new PersonDefault("James").name shouldBe "James Smith"
+  }
 }

@@ -31,4 +31,10 @@ class PersonSpec  extends UnitSpec {
     adder5.apply(3) shouldBe 8
     adder5(3) shouldBe 8
   }
+
+  "PersonFieldGetters" should "fix name and flex surname when applied via companion object" in {
+    val bond = PersonFieldGetters("Bond")
+
+    bond.name shouldBe "John Bond"
+  }
 }

@@ -26,3 +26,9 @@ class Adder(amount: Int) {
   def apply(in: Int): Int = in + amount
 }
 
+object PersonFieldGetters {
+  def apply(lastName: String): PersonFieldGetters = {
+    new PersonFieldGetters("John", lastName)
+  }
+}
+

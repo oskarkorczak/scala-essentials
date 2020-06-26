@@ -6,6 +6,12 @@ case object TigerFood extends Food
 case object Licorice extends Food
 final case class CatFood(food: String) extends Food
 
+
+/**
+ * Polymorphic (OO) Style
+ * It's easier to add DATA, as it is only extending trait in another class,
+ * but difficult to add METHODS, as all existing, derived classes have to change.
+  */
 class PolymorphismSolutionOne {
   sealed trait Feline {
     def dinner: Food
@@ -47,6 +53,11 @@ class PolymorphismSolutionTwo {
 }
 
 // =================
+/**
+ * Pattern Matching (FP) Style
+ * It's easier to add METHODS, as it is only extending trait with another function (or add one more class with it),
+ * but difficult to add DATA, as all existing, methods have to change.
+ */
 
 class PatternMatching {
   sealed trait Feline {

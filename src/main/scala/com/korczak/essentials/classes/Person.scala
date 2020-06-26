@@ -35,3 +35,9 @@ object PersonFieldGetters {
 case class Employee(firstName: String, surname: String) {
   def name = s"$firstName $surname"
 }
+
+case object Citizen {
+  def firstName = "Joe"
+  def lastName = "Sixpack"
+  def name = s"$firstName $lastName"
+}

@@ -57,4 +57,12 @@ class PersonSpec  extends UnitSpec {
     dave.productArity shouldBe 2
     dave.productElement(1) shouldBe "Davidson"
   }
+
+  "Citizen" should "has meaningful toString as case object" in {
+    Citizen.firstName shouldBe "Joe"
+    Citizen.lastName shouldBe "Sixpack"
+    Citizen.toString shouldBe "Citizen"
+
+    Citizen.productArity shouldBe 0
+  }
 }

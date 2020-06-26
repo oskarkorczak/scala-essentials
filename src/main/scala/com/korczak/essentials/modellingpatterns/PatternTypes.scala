@@ -2,6 +2,9 @@ package com.korczak.essentials.modellingpatterns
 
 class PatternTypes {
 
+  // Below patterns are aiming to combine data together, as oppose to structural recursion, which aims to split larger
+  // data structure into smaller pieces
+
   // HAS-A relation combined with AND logical operator
   // Both are equivalent and mean that a class has featureOne and featureTwo
 

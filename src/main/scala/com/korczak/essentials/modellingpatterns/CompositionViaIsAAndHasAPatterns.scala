@@ -1,11 +1,12 @@
 package com.korczak.essentials.modellingpatterns
 
-class PatternTypes {
+class CompositionViaIsAAndHasAPatterns {
 
   // Below patterns are aiming to combine data together, as oppose to structural recursion, which aims to split larger
   // data structure into smaller pieces
 
-  // HAS-A relation combined with AND logical operator
+  // ======
+  // HAS-A + AND
   // Both are equivalent and mean that a class has featureOne and featureTwo
 
   // Solution #1
@@ -18,25 +19,23 @@ class PatternTypes {
   }
 
   // ======
-
-  // IS-A relation combined with OR logical operator
+  // IS-A + OR
 
   sealed trait SumType
   final case class eitherThis() extends SumType
   final case class orThat() extends SumType
 
-  // =======
-  // OTHER TWO, MISSING PATTERNS
-  // =======
-
-  // IS-A relation combined with AND logical operator
+  // ======
+  // LESS USED PATTERNS
+  // ======
+  // IS-A + AND
   // It means that Aob is Bob and Cob aka Cake Pattern
   trait Bob
   trait Cob
   trait Aob extends Bob with Cob
 
-
-  // HAS-A relation combined with OR logical operator
+  // ======
+  // HAS-A + OR
   // It means that A has B or C
 
   // Solution #1
@@ -52,5 +51,4 @@ class PatternTypes {
   sealed trait Alo
   final case class Dlo(b: String) extends Alo
   final case class Elo(c: Int) extends Alo
-
 }

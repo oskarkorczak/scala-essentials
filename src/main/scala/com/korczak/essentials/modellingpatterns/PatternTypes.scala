@@ -1,6 +1,6 @@
 package com.korczak.essentials.modellingpatterns
 
-class Pattern {
+class PatternTypes {
 
   // HAS-A relation combined with AND logical operator
   // Both are equivalent and mean that a class has featureOne and featureTwo

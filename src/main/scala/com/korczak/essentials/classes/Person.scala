@@ -21,3 +21,8 @@ class PersonFieldGetters(val first: String, val last: String) {
 class PersonDefault(val first: String, val last: String = "Smith") {
   def name: String = s"$first $last"
 }
+
+class Adder(amount: Int) {
+  def apply(in: Int): Int = in + amount
+}
+

@@ -24,4 +24,11 @@ class PersonSpec  extends UnitSpec {
     new PersonDefault("James", "Bond").name shouldBe "James Bond"
     new PersonDefault("James").name shouldBe "James Smith"
   }
+
+  "Adder" should "apply itself to 'in' number" in {
+    val adder5 = new Adder(5)
+
+    adder5.apply(3) shouldBe 8
+    adder5(3) shouldBe 8
+  }
 }

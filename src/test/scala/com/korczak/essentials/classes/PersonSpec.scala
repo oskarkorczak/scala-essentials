@@ -11,4 +11,12 @@ class PersonSpec  extends UnitSpec {
   "PersonWithConstructor" should "introduce itself" in {
     new PersonWithConstructor("James", "Bond").name shouldBe "James Bond"
   }
+
+  "PersonFieldGetters" should "introduce itself and have getters" in {
+    val bond = new PersonWithConstructor("James", "Bond")
+
+    bond.name shouldBe "James Bond"
+    bond.firstName shouldBe "James"
+    bond.lastName shouldBe "Bond"
+  }
 }

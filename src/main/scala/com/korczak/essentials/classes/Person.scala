@@ -13,3 +13,7 @@ class PersonWithConstructor(first: String, last: String) {
 
   def name: String = s"$firstName $lastName"
 }
+
+class PersonFieldGetters(val first: String, val last: String) {
+  def name: String = s"$first $last"
+}

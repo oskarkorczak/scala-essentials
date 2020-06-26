@@ -37,4 +37,24 @@ class PersonSpec  extends UnitSpec {
 
     bond.name shouldBe "John Bond"
   }
+
+  "Employee" should "present all case class features" in {
+    val dave = Employee("David", "Davidson")
+    val anotherDave = Employee("David", "Davidson")
+
+    dave.firstName shouldBe "David"
+    dave.surname shouldBe "Davidson"
+    dave.toString shouldBe "Employee(David,Davidson)"
+
+    dave.equals(anotherDave)
+    dave equals anotherDave
+    dave == anotherDave shouldBe true
+
+    dave.copy().eq(anotherDave) shouldBe false
+    dave.copy() eq anotherDave shouldBe false
+    dave.copy(surname = "Richardson").name shouldBe "David Richardson"
+
+    dave.productArity shouldBe 2
+    dave.productElement(1) shouldBe "Davidson"
+  }
 }

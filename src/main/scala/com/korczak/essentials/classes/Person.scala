@@ -32,3 +32,6 @@ object PersonFieldGetters {
   }
 }
 
+case class Employee(firstName: String, surname: String) {
+  def name = s"$firstName $surname"
+}

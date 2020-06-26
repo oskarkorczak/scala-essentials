@@ -7,4 +7,9 @@ class Person {
   def name: String = s"$firstName $lastName"
 }
 
+class PersonWithConstructor(first: String, last: String) {
+  val firstName = first
+  val lastName = last
 
+  def name: String = s"$firstName $lastName"
+}

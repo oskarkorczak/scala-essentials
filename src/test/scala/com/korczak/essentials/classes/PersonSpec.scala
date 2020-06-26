@@ -4,9 +4,11 @@ import com.korczak.essentials.UnitSpec
 
 class PersonSpec  extends UnitSpec {
 
-  behavior of "Person"
-
-  it should "introduce itself" in {
+  "Person" should "introduce itself" in {
     new Person().name shouldBe "James Bond"
+  }
+
+  "PersonWithConstructor" should "introduce itself" in {
+    new PersonWithConstructor("James", "Bond").name shouldBe "James Bond"
   }
 }
